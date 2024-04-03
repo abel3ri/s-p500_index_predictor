@@ -10,3 +10,6 @@ data = pd.read_csv("all_stocks_5yr.csv")
 # train with 80% of the data and test on remaining(20%) of the data
 train_data = data.iloc[:int(0.8 * len(data)), :]
 test_data = data.iloc[int(0.8 * len(data)):, :]
+
+open_price = 'open'
+close_price = 'close'
