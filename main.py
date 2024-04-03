@@ -13,3 +13,6 @@ test_data = data.iloc[int(0.8 * len(data)):, :]
 
 open_price = 'open'
 close_price = 'close'
+
+model = xgb.XGBRegressor()
+model.fit(train_data[open_price], train_data[close_price])
