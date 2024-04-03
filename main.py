@@ -4,8 +4,9 @@ import pandas as pd
 # aggregate of mutliple weak prediction models
 import xgboost as xgb
 import matplotlib.pyplot as plt
+import os
 
-data = pd.read_csv("all_stocks_5yr.csv")
+data = pd.read_csv(os.path.join(os.path.dirname(__file__), "all_stocks_5yr.csv"))
 
 # train with 80% of the data and test on remaining(20%) of the data
 train_data = data.iloc[:int(0.8 * len(data)), :]
