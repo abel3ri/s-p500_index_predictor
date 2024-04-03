@@ -19,3 +19,11 @@ model.fit(train_data[open_price], train_data[close_price])
 
 predictions = model.predict(test_data[open_price])
 accuracy = model.score(test_data[open_price], test_data[close_price])
+
+print(f'Accuracy of the model: {accuracy * 100}%')
+
+
+plt.plot(data[close_price], label="Close price")
+plt.plot(test_data[close_price].index, predictions, label='Predictions')
+plt.legend()
+plt.show()
