@@ -16,3 +16,6 @@ close_price = 'close'
 
 model = xgb.XGBRegressor()
 model.fit(train_data[open_price], train_data[close_price])
+
+predictions = model.predict(test_data[open_price])
+accuracy = model.score(test_data[open_price], test_data[close_price])
